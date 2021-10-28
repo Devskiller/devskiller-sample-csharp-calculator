@@ -24,14 +24,14 @@ namespace CalculatorSample.Tests
 		[TestCase( 2,  2,  0)]
 		[TestCase(-2,  2, -4)]
 		[TestCase(-2, -2, -0)]
-		public void ThatSubstractingIsWorkingCorrectly(int a, int b, int expected)
+		public void ThatSubtractingIsWorkingCorrectly(int a, int b, int expected)
 		{
 			//Setup
 			Calculator sut = new Calculator();
 			//Act
-			int actual = sut.Substract(a, b);
+			int actual = sut.Subtract(a, b);
 			//Verify
-			Assert.AreEqual(expected, actual, "The Substract functionality is not working correctly.");
+			Assert.AreEqual(expected, actual, "The Subtract functionality is not working correctly.");
 		}
 
 		[TestCase( 2, 2,  4)]

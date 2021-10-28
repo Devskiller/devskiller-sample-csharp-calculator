@@ -44,32 +44,32 @@ namespace CalculatorSample.VerifyTests
         [TestCase(int.MaxValue, 2, int.MaxValue - 2)]
         [TestCase(int.MinValue, -2, int.MinValue + 2)]
         [TestCase(int.MinValue, int.MinValue, 0)]
-        public void ThatSubstractingIsWorkingCorrectly(int a, int b, int expected)
+        public void ThatSubtractingIsWorkingCorrectly(int a, int b, int expected)
         {
             // Arrange
             Calculator sut = new Calculator();
 
             // Act
-            int actual = sut.Substract(a, b);
+            int actual = sut.Subtract(a, b);
 
             // Assert
-            Assert.AreEqual(expected, actual, "The Substract functionality is not working correctly.");
+            Assert.AreEqual(expected, actual, "The Subtract functionality is not working correctly.");
         }
 
         [TestCase(int.MinValue, 2)]
         [TestCase(2, int.MinValue)]
         [TestCase(int.MaxValue, -2)]
         [TestCase(-2, int.MaxValue)]
-        public void ThatSubstractingIsWorkingCorrectlyForBoundaries(int a, int b)
+        public void ThatSubtractingIsWorkingCorrectlyForBoundaries(int a, int b)
         {
             // Arrange
             Calculator sut = new Calculator();
 
             // Act
-            TestDelegate substract = () => sut.Substract(a, b);
+            TestDelegate subtract = () => sut.Subtract(a, b);
 
             // Assert
-            Assert.Throws<OverflowException>(substract, "The Substract functionality is not working correctly.");
+            Assert.Throws<OverflowException>(subtract, "The Subtract functionality is not working correctly.");
         }
 
         [TestCase(2, 2, 4)]
