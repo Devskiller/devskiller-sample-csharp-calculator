@@ -13,7 +13,7 @@ namespace CalculatorSample
             throw new NotImplementedException();
         }
 
-        public int Substract(int a, int b)
+        public int Subtract(int a, int b)
         {
             throw new NotImplementedException();
         }
